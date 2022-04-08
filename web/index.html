@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API Rest Calypso - LogBook</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table {
+                border:1px solid black;
+                border-collapse:collapse;                
+            }
+            table td,
+            table th {
+                border:1px solid black;
+                padding:5px 10px;
+            }
+            table th {
+                background-color:orange;
+            }
+            .cabecera {
+                font-weight: bold;
+                background-color:#dddddd;
+            }
+            .separacion {
+                text-align: center;
+                font-weight: bold;
+                background-color:#dddddd;
+            }
+            .rotulo {
+                font-weight: bold;
+                background-color:#f2deac;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>API Rest - Calypso</h1>       
+        <table>
+            <tr>
+                <td class="rotulo">Database</td>
+                <td>Calypso</td>
+            </tr>                
+            <tr>
+                <td class="rotulo">Table</td>
+                <td>
+                    usuario</br>
+                    inmersion</br>
+                    agencia</br>
+                    certificacion</br>
+                    usuario_certicicacion</br>
+                    planning</br>
+                    equipamiento</br>
+                </td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Content-Type</td>
+                <td>application/json</td>
+            </tr>  
+            <tr>
+                <td class="rotulo">Accept</td>
+                <td>application/json</td>
+            </tr>  
+        </table>
+
+         <br><br> 
+
+        <table>
+            <tr>
+                <th>MÉTODO</th>
+                <th>PATH</th>
+                <th>DESCRIPCIÓN</th>
+            </tr>
+            
+            <!-- ********************************** -->
+            <tr>
+                <td class="separacion" colspan="3">Usuario</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/user/all">/api/user/all</a></td>
+                <td>Listado de todos los usuarios registrados</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/user/public/all">/api/user/public/all</a></td>
+                <td>Listado de todos los usuarios que tienen perfil publico</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/user/nickname/UsuarioEjemplo1">/api/user/nickname/{nickName}</a></td>
+                <td>Datos del usuario solicitado</td>
+            </tr>
+            
+            <!-- ********************************** -->
+            <tr>
+                <td class="separacion" colspan="3">Inmersion</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/divelog/all">/api/divelog/all</a></td>
+                <td>Listado de todas las imersiones registradas</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/divelog/id/1">/api/divelog/id/{id}</a></td>
+                <td>Datos de la inmersión indicada</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/divelog/nickname/UsuarioEjemplo1">/api/divelog/nickname/{nickName}</a></td>
+                <td>Listado de todas las imersiones registradas del usuario indicado</td>
+            </tr>
+            
+            <!-- ********************************** -->
+            <tr>
+                <td class="separacion" colspan="3">Agencia</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/agency/all">/api/agency/all</a></td>
+                <td>Listado de todas las agencias registradas</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/agency/id/14">/api/agency/id/{id}</a></td>
+                <td>Datos de la agencia solicitada</td>
+            </tr>
+            
+            <!-- ********************************** -->
+            <tr>
+                <td class="separacion" colspan="3">Certicicacion</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/certification/all">/api/certification/all</a></td>
+                <td>Listado de todas las certificaciones registradas</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/certification/agencyid/14">/api/certification/agencyid/{agencyId}</a></td>
+                <td>Listado de certificaciones que expide la agencia indicada</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/certification/id/4">/api/certification/id/{id}</a></td>
+                <td>Datos de la certificación solicitada</td>
+            </tr>
+            
+             <!-- ********************************** -->
+            <tr>
+                <td class="separacion" colspan="3">Usuario_Certicicacion</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/usercertification/UsuarioEjemplo1/all">/api/usercertification/{nickName}/all</a></td>
+                <td>Listado de todas las certificaciones del usuario indicado</td>
+            </tr>
+            <tr>
+                <td class="cabecera">GET</td>
+                <td><a href="http://localhost:8081/calypso/api/usercertification/id/1">/api/usercertification/id/{idUserCertification}</a></td>
+                <td>Datos de la certificacion indicada</td>
+            </tr>
+            
+        </table>
+    </body>
+</html>
